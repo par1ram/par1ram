@@ -11,6 +11,7 @@ In fact, I am a full stack developer and can take a project from scratch to depl
 * ⚡  I optimize everything in my life
 
 [![Telegram](https://img.shields.io/badge/Telegram-0088cc?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/par1ram)
+[![LeetCode](https://img.shields.io/badge/LeetCode-FFA116?style=for-the-badge&logo=leetcode&logoColor=white)](https://leetcode.com/par1ram)
 
 ### Skills
 
