@@ -1,4 +1,4 @@
-Hi ![](https://www.icegif.com/wp-content/uploads/levi-ackerman-icegif-7.gif) my name is Vladislav Khorunzhiy
+Hi my name is Vladislav Khorunzhiy
 ============================================================================================================================================
 
 Go Developer
