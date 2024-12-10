@@ -11,7 +11,7 @@ In fact, I am a full stack developer and can take a project from scratch to depl
 * ⚡  I optimize everything in my life
 
 <a href="https://t.me/your_username" style="display: flex; align-items: center; justify-content: center;">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" alt="Telegram" style="width: 20px; height: 20px; vertical-align: middle; margin-right: 8px;">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" alt="Telegram" style="width: 20px; height: 20px;">
   <span>Telegram</span>
 </a>
 
