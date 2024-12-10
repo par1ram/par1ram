@@ -10,7 +10,10 @@ In fact, I am a full stack developer and can take a project from scratch to depl
 * ✉️  You can contact me at [v.m.khorunzhiy@yandex.ru](mailto:v.m.khorunzhiy@yandex.ru)
 * ⚡  I optimize everything in my life
 
-[![Telegram](https://img.shields.io/badge/Telegram-0088cc?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/par1ram)
+<a href="https://t.me/your_username" style="display: inline-block; background-color: #0088cc; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; font-size: 16px;">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" alt="Telegram" style="width: 20px; height: 20px; vertical-align: middle; margin-right: 8px;">
+  Связаться в Telegram
+</a>
 
 ### Skills
 
