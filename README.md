@@ -1,11 +1,7 @@
 Go Developer
 ------------
 
-In fact, I am a full stack developer and can take a project from scratch to deployment. It is important for me to see the results of my activities. My main hobby is programming. In my free time I like to read documentation. I love learning new technologies. I am familiar with system programming, I know the so-called base that everyone talks about.
-
-* 🌍  I'm based in Moscow
-* ✉️  You can contact me at [v.m.khorunzhiy@yandex.ru](mailto:v.m.khorunzhiy@yandex.ru)
-* ⚡  I optimize everything in my life
+In fact, I am a full stack developer and can take a project from scratch to deployment. It is important for me to see the results of my activities.
 
 [![Telegram](https://img.shields.io/badge/Telegram-0088cc?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/par1ram)
 [![LeetCode](https://img.shields.io/badge/LeetCode-FFA116?style=for-the-badge&logo=leetcode&logoColor=white)](https://leetcode.com/par1ram)
