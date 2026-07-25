@@ -1,0 +1,67 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="1280"
+  height="420"
+  viewBox="0 0 1280 420"
+  role="img"
+  aria-labelledby="title description"
+>
+  <title id="title">Vladislav Panteleev — designer and developer</title>
+  <desc id="description">
+    Editorial banner in warm white, black, acid green and signal red.
+  </desc>
+
+  <rect width="1280" height="420" fill="#f1f0e9" />
+  <path d="M0 66.5H1280M0 353.5H1280" stroke="#11110f" stroke-opacity=".24" />
+  <path d="M38.5 0V420M1241.5 0V420" stroke="#11110f" stroke-opacity=".24" />
+
+  <rect x="1012" y="67" width="229" height="286" fill="#11110f" />
+  <rect x="1127" y="67" width="114" height="286" fill="#dfff3f" />
+  <path d="M1012 353 1241 67" stroke="#f0422b" stroke-width="18" />
+
+  <g fill="#11110f" font-family="Arial, Helvetica, sans-serif">
+    <text x="39" y="42" font-size="17" font-weight="800" letter-spacing="-1">
+      VP
+    </text>
+    <text x="64" y="32" font-size="8" font-weight="700">©26</text>
+
+    <text x="404" y="41" font-size="12" letter-spacing=".7">
+      INDEPENDENT DESIGNER &amp; DEVELOPER
+    </text>
+    <text x="1111" y="41" font-size="12" letter-spacing=".7">
+      MOSCOW / REMOTE
+    </text>
+
+    <text
+      x="39"
+      y="193"
+      font-size="128"
+      font-weight="800"
+      letter-spacing="-9"
+      textLength="917"
+      lengthAdjust="spacingAndGlyphs"
+    >
+      VLADISLAV
+    </text>
+    <text
+      x="39"
+      y="319"
+      font-size="128"
+      font-weight="800"
+      letter-spacing="-9"
+      textLength="917"
+      lengthAdjust="spacingAndGlyphs"
+    >
+      PANTELEEV
+    </text>
+
+    <text x="39" y="390" font-size="12" letter-spacing=".7">
+      WEB / MOTION / 3D
+    </text>
+    <text x="404" y="390" font-size="12" letter-spacing=".7">
+      DESIGN → PRODUCTION
+    </text>
+  </g>
+
+  <circle cx="1219" cy="389" r="6" fill="#3157ff" />
+</svg>
