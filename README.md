@@ -2,47 +2,60 @@
   <img
     src="./assets/profile-header.svg"
     width="100%"
-    alt="Vladislav Panteleev — independent designer and developer"
+    alt="Vladislav Khorunzhiy — software engineer"
   />
 </p>
 
 <p align="center">
-  <a href="https://transmegalinkdon.ru"><strong>Live work ↗</strong></a>
+  <a href="https://transmegalinkdon.ru"><strong>Production work ↗</strong></a>
   &nbsp;·&nbsp;
   <a href="https://github.com/par1ram?tab=repositories">Repositories</a>
+  &nbsp;·&nbsp;
+  <a href="https://t.me/VladislavKhorunzhiy">Telegram</a>
   &nbsp;·&nbsp;
   Moscow / Remote
 </p>
 
-## Design, code, launch.
+## Systems, interfaces, production.
 
-Независимый дизайнер и разработчик. Проектирую и собираю сайты целиком:
-от структуры и визуального языка до motion, production-кода, Git и запуска.
+Software engineer with 6+ years of production experience across mining
+infrastructure, high-volume vehicle telemetry and fintech.
 
-Сейчас мой фокус — выразительные лендинги, интерактивные 3D-интерфейсы и
-небольшие full-stack продукты, которые не выглядят как шаблон.
+I work primarily with Go, PostgreSQL, Kafka and observability on the backend.
+On product-facing work I use TypeScript, React and Next.js, including complex
+motion and WebGL interfaces. The common thread is ownership of the complete
+system: data model, failure paths, interface and release.
 
-### Selected work
+### Selected engineering evidence
+
+| Area | Result |
+| :-- | :-- |
+| Mining infrastructure | Stratum Relay, virtual hashrate, external pool integrations and production incident analysis |
+| Vehicle telemetry | Services for a fleet of 30,000+ cars; a Go/React emulator reduced scenario setup from 30 minutes to seconds |
+| Fintech | Idempotent payment processing; PostgreSQL load reduced by 30% with Redis and asynchronous Kafka processing |
+| Engineering education | 58 executable missions, 277 hidden tests and an isolated Rust runner |
+
+### Selected product work
 
 <table>
   <tr>
     <td width="50%" valign="top">
       <a href="https://transmegalinkdon.ru">
-        <img src="./assets/work/tmld.png" alt="ТрансМегаЛинкДон — production-сайт инженерной компании" />
+        <img src="./assets/work/tmld.png" alt="TransMegaLinkDon production website" />
       </a>
       <br /><br />
-      <strong>01 / ТрансМегаЛинкДон ↗</strong><br />
-      <sub>Корпоративный production-сайт: дизайн, frontend и живая 3D-сцена.</sub><br /><br />
+      <strong>TransMegaLinkDon ↗</strong><br />
+      <sub>Production website for an engineering company with an interactive 3D product scene.</sub><br /><br />
       <code>Next.js</code> <code>TypeScript</code> <code>R3F</code>
     </td>
     <td width="50%" valign="top">
       <a href="https://landing-dusky-alpha-60.vercel.app">
-        <img src="./assets/work/atrium.png" alt="ATRIUM — интерактивный архитектурный 3D-лендинг" />
+        <img src="./assets/work/atrium.png" alt="ATRIUM interactive architecture project" />
       </a>
       <br /><br />
-      <strong>02 / ATRIUM ↗</strong><br />
-      <sub>Архитектурный промо-сайт с управляемой камерой и конфигуратором.</sub><br /><br />
-      <code>Next.js</code> <code>Three.js</code> <code>Motion</code>
+      <strong>ATRIUM ↗</strong><br />
+      <sub>Architecture interface with a synchronized camera, lighting system and material configurator.</sub><br /><br />
+      <code>Next.js</code> <code>Three.js</code> <code>WebGL</code>
     </td>
   </tr>
 </table>
@@ -50,40 +63,41 @@
 <table>
   <tr>
     <td width="50%" valign="top">
-      <img src="./assets/work/palata.png" alt="ПАЛАТА — редакционный лендинг выставочного пространства" />
+      <img src="./assets/work/relayos.png" alt="RelayOS B2B execution system" />
       <br /><br />
-      <strong>03 / ПАЛАТА</strong><br />
-      <sub>Редакционный лендинг с inline-CMS, историей версий и VPS-ready storage.</sub><br /><br />
-      <code>CMS</code> <code>Editorial</code> <code>Motion</code>
+      <strong>RelayOS</strong> <sub>— in development</sub><br />
+      <sub>A B2B execution system connecting meeting evidence, approved work and code delivery.</sub><br /><br />
+      <code>Next.js</code> <code>PostgreSQL</code> <code>Realtime</code>
     </td>
     <td width="50%" valign="top">
-      <img src="./assets/work/seventeen.png" alt="≤17 — кинетический лендинг фестиваля короткого кино" />
+      <img src="./assets/work/rust-course.png" alt="Rust Interview Trainer roadmap" />
       <br /><br />
-      <strong>04 / ≤17</strong><br />
-      <sub>Кинетический фестивальный промо-сайт с Canvas и конструктором маршрута.</sub><br /><br />
-      <code>Canvas</code> <code>Interaction</code> <code>Motion</code>
+      <strong>Rust Interview Trainer</strong> <sub>— local-first release</sub><br />
+      <sub>Full-stack engineering course with executable missions, hidden tests and an isolated Rust runtime.</sub><br /><br />
+      <code>Rust</code> <code>Next.js</code> <code>PostgreSQL</code>
     </td>
   </tr>
 </table>
 
-### Public code
+### Core stack
+
+| Backend | Data | Product | Infrastructure |
+| :-- | :-- | :-- | :-- |
+| Go, Rust, REST, gRPC, GraphQL | PostgreSQL, Redis, Kafka, ClickHouse | TypeScript, React, Next.js, WebGL | Linux, Docker, Kubernetes, Nginx, GitLab CI |
+
+### Public repositories
 
 - [**FORMA / ATRIUM 01**](https://github.com/par1ram/forma-atrium-01) —
-  production-minded 3D architecture landing with a CRM adapter.
-- [**AkiraBlade**](https://github.com/par1ram/akirablade) —
-  full-stack fashion storefront with PostgreSQL, Prisma and Docker.
+  production-oriented 3D architecture landing with a CRM adapter.
 - [**E-commerce microservices**](https://github.com/par1ram/ecom-microservices) —
   Go services behind a GraphQL gateway, gRPC and isolated databases.
+- [**AkiraBlade**](https://github.com/par1ram/akirablade) —
+  full-stack storefront with PostgreSQL, Prisma and Docker.
 - [**RSS Aggregator**](https://github.com/par1ram/aggregator) —
   concurrent Go scraper, REST API and PostgreSQL persistence.
-
-### Working stack
-
-`TypeScript` · `React` · `Next.js` · `Three.js / R3F` · `Node.js / NestJS` ·
-`Go` · `PostgreSQL` · `Docker` · `Vercel` · `VPS`
 
 <br />
 
 <p align="right">
-  <sub>Independent designer &amp; developer · Moscow / Remote · © 2026</sub>
+  <sub>Software engineer · Moscow / Remote · 2026</sub>
 </p>
