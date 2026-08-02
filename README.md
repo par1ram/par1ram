@@ -11,7 +11,3 @@
 <p align="center">
   <img src="./profile-3d-contrib/profile-night-view.svg" width="100%" alt="3D GitHub contribution graph" />
 </p>
-
-<p align="center">
-  <img src="https://github-readme-stats.shion.dev/api/top-langs/?username=par1ram&layout=donut&langs_count=10&theme=github_dark&hide_border=true&bg_color=0d1117&title_color=8b949e&text_color=8b949e" height="220" alt="Top programming languages including Go" />
-</p>
