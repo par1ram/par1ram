@@ -13,5 +13,9 @@
 </p>
 
 <p align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=par1ram&bg_color=0d1117&color=8b949e&line=58a6ff&point=f78166&area_color=1f6feb&area=true&hide_border=true&custom_title=Contribution%20activity" width="100%" alt="Contribution activity graph" />
+  <img src="https://github-readme.fiverse.my/api/languages?username=par1ram" width="684" alt="Top programming languages" />
+</p>
+
+<p align="center">
+  <img src="https://skillicons.dev/icons?i=go,rust,ts&theme=dark" height="52" alt="Golang, Rust, TypeScript" />
 </p>
