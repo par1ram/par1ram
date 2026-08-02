@@ -13,9 +13,5 @@
 </p>
 
 <p align="center">
-  <img src="https://github-readme.fiverse.my/api/languages?username=par1ram" width="684" alt="Top programming languages" />
-</p>
-
-<p align="center">
-  <img src="https://skillicons.dev/icons?i=go,rust,ts&theme=dark" height="52" alt="Golang, Rust, TypeScript" />
+  <img src="https://github-readme-stats.shion.dev/api/top-langs/?username=par1ram&layout=donut&langs_count=10&theme=github_dark&hide_border=true&bg_color=0d1117&title_color=8b949e&text_color=8b949e" height="220" alt="Top programming languages including Go" />
 </p>
