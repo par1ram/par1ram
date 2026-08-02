@@ -9,9 +9,9 @@
 <br />
 
 <p align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=par1ram&bg_color=0d1117&color=8b949e&line=58a6ff&point=f78166&area_color=1f6feb&area=true&hide_border=true&custom_title=Contribution%20activity" width="100%" alt="Contribution activity graph" />
+  <img src="./profile-3d-contrib/profile-night-view.svg" width="100%" alt="3D GitHub contribution graph" />
 </p>
 
 <p align="center">
-  <img src="https://dailygreen.xyz/par1ram" width="100%" alt="GitHub contribution heatmap" />
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=par1ram&bg_color=0d1117&color=8b949e&line=58a6ff&point=f78166&area_color=1f6feb&area=true&hide_border=true&custom_title=Contribution%20activity" width="100%" alt="Contribution activity graph" />
 </p>
