@@ -9,5 +9,5 @@
 <br />
 
 <p align="center">
-  <img src="./profile-3d-contrib/profile-night-view.svg" width="100%" alt="3D GitHub contribution graph" />
+  <img src="./profile-3d-contrib/profile-night-view.svg?v=0" width="100%" alt="3D GitHub contribution graph" />
 </p>
