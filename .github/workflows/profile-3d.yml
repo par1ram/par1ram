@@ -39,7 +39,7 @@ jobs:
         env:
           CACHE_VERSION: ${{ github.run_id }}
         run: |
-          sed -i -E "s|(profile-night-view\.svg)\?v=[0-9]+|\1?v=${CACHE_VERSION}|" README.md
+          sed -i -E "s|(profile-night-green\.svg)\?v=[0-9]+|\1?v=${CACHE_VERSION}|" README.md
 
       - name: Commit generated graph
         run: |
