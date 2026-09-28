@@ -5,9 +5,3 @@
     <img src="https://img.shields.io/badge/Stratum%20V2-2%20merged%20PRs-58A6FF?style=for-the-badge&logo=github&logoColor=white" alt="Stratum V2 contributor — 2 merged pull requests" />
   </a>
 </div>
-
-<br />
-
-<p align="center">
-  <img src="./profile-3d-contrib/profile-night-green.svg?v=36351286805" width="100%" alt="3D GitHub contribution graph in GitHub green palette" />
-</p>
