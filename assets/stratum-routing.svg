@@ -46,6 +46,11 @@
       <rect width="28" height="10" x="0" y="0" rx="2"/><rect width="28" height="10" x="0" y="14" rx="2"/>
       <path d="M4 5h3m6 0h10M4 19h3m6 0h10"/>
     </g>
+    <g id="upstream-jack">
+      <rect width="21" height="13" rx="2" fill="#0e1b16" stroke="#8fa88d"/>
+      <path d="M3 3h15v5h-4v3H7V8H3z" fill="#355443"/>
+      <path d="M6 3v3m3-3v3m3-3v3m3-3v3" stroke="#aec0a0" stroke-width="1.2"/>
+    </g>
     <g id="port"><circle r="4.2" fill="#11241e" stroke="#96b89d" stroke-width="2"/></g>
     <path id="in1" d="M264 290H357"/><path id="in2" d="M264 360H357"/>
     <path id="toA" d="M598 290H750"/><path id="toB1" d="M598 307H625L661 343H750"/><path id="toB2" d="M598 361H750"/>
@@ -160,6 +165,26 @@
     </g>
     <rect class="normal" x="57" y="9" width="5" height="2" fill="#c5ed9f"/>
     <rect class="onB" x="57" y="21" width="5" height="2" fill="#c5ed9f"/>
+  </g>
+  <g transform="translate(480 263)" stroke-linejoin="round">
+    <title>Persistent upstream sockets. The ASIC moves from A to a ready socket on B. The proxy keeps its own socket on B.</title>
+    <path d="m0 6 8-5h84l-7 5z" fill="#56715c" stroke="#a2b79d"/>
+    <path d="m85 6 7-5v29l-7 5z" fill="#2a4536" stroke="#91a98d"/>
+    <rect y="6" width="85" height="29" rx="3" fill="#1a2d24" stroke="#a1b599"/>
+    <use href="#upstream-jack" x="5" y="9"/><use href="#upstream-jack" x="33" y="9"/>
+    <use href="#upstream-jack" x="59" y="9"/>
+    <path d="M29 10v21" stroke="#5c735f"/>
+    <g class="mono" font-size="9" font-weight="700" text-anchor="middle">
+      <text x="9" y="32">A</text><text x="37" y="32">B</text>
+    </g>
+    <g fill="none" stroke-width="3" stroke-linecap="round">
+      <path d="M17 28h5m23 0h6" stroke="#61775f"/>
+      <g class="normal"><path d="M17 28h5" stroke="#c5ed9f"/></g>
+      <g class="outage"><path d="M17 28h5" stroke="#f19680"/></g>
+      <g class="switch"><path d="M45 28h6" stroke="#ffb276"/></g>
+      <g class="onB"><path d="M45 28h6" stroke="#c5ed9f"/></g>
+      <path d="M68 28h6" stroke="#80e8b0"/>
+    </g>
   </g>
   <text x="383" y="325" font-size="26" font-weight="650">Stratum relay</text>
   <text x="383" y="352" class="muted" font-size="17">Persistent connections</text>
