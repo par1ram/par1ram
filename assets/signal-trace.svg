@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="840" height="354" viewBox="0 0 840 354" role="img" aria-labelledby="title desc">
+  <title id="title">Vladislav • Signal Trace</title>
+  <desc id="desc">A pocket-console puzzle. Follow the line from the orange diamond on the left to output A, B or C. At a crossing, continue on the same line.</desc>
+  <defs>
+    <pattern id="grid" width="16" height="16" patternUnits="userSpaceOnUse">
+      <circle cx="1" cy="1" r="1" fill="#344b49"/>
+    </pattern>
+    <path id="upper" d="M105 171 H196 L242 217 H320 L366 263 H548 L594 217 H720"/>
+    <path id="middle" d="M105 217 H196 L242 171 H428 L474 217 H548 L594 263 H720"/>
+    <path id="lower" d="M105 263 H320 L366 217 H428 L474 171 H720"/>
+  </defs>
+  <rect x="1" y="1" width="838" height="352" rx="22" fill="#192625" stroke="#455951" stroke-width="2"/>
+  <g font-family="ui-monospace, SFMono-Regular, Consolas, monospace">
+    <g transform="translate(37 33)" fill="#ffa76d">
+      <path d="M0 0h9v9H0zm18 0h9v9h-9zM0 9h9v9H0zm18 0h9v9h-9zM9 18h9v9H9z"/>
+    </g>
+    <text x="81" y="58" font-size="29" font-weight="700" fill="#f3f1df">Vladislav</text>
+    <text x="803" y="55" text-anchor="end" font-size="18" fill="#b4c6b7">@par1ram</text>
+    <rect x="24" y="87" width="792" height="239" rx="12" fill="#101c1b" stroke="#415650"/>
+    <rect x="25" y="88" width="790" height="237" rx="11" fill="url(#grid)"/>
+    <text x="53" y="126" font-size="20" letter-spacing="2" font-weight="700" fill="#e0ead5">SIGNAL TRACE</text>
+    <text x="785" y="126" text-anchor="end" font-size="16" fill="#abbfb0">FIND THE OUTPUT</text>
+    <!-- Narrow breaks mark underpasses where two traces cross. -->
+    <g fill="none" stroke-linejoin="round" stroke-linecap="round">
+      <use href="#upper" stroke="#c6dfb6" stroke-width="5"/>
+      <use href="#middle" stroke="#101c1b" stroke-width="15"/>
+      <use href="#middle" stroke="#c6dfb6" stroke-width="5"/>
+      <use href="#lower" stroke="#101c1b" stroke-width="15"/>
+      <use href="#lower" stroke="#c6dfb6" stroke-width="5"/>
+    </g>
+    <g fill="#101c1b" stroke="#afc6a5" stroke-width="3">
+      <circle cx="105" cy="217" r="6"/><circle cx="105" cy="263" r="6"/>
+      <circle cx="720" cy="171" r="6"/><circle cx="720" cy="217" r="6"/><circle cx="720" cy="263" r="6"/>
+    </g>
+    <path d="m105 160 11 11-11 11-11-11z" fill="#ffa76d"/>
+    <text x="54" y="177" font-weight="700" font-size="20" fill="#ffa76d">IN</text>
+    <g font-weight="700" font-size="22" fill="#e0ead5">
+      <text x="752" y="178">A</text><text x="752" y="224">B</text><text x="752" y="270">C</text>
+    </g>
+  </g>
+</svg>

@@ -1,7 +1,32 @@
-<div align="center">
-  <a href="https://vkhorunzhiy.ru/resume">https://vkhorunzhiy.ru/resume</a>
-  <br />
-  <a href="https://github.com/stratum-mining/stratum/pulls?q=is%3Apr+author%3Apar1ram+is%3Amerged">
-    <img src="https://img.shields.io/badge/Stratum%20V2-2%20merged%20PRs-58A6FF?style=for-the-badge&logo=github&logoColor=white" alt="Stratum V2 contributor — 2 merged pull requests" />
-  </a>
-</div>
+![Vladislav’s Signal Trace puzzle. Three circuit traces lead from the left to outputs A, B, and C. Start at the orange diamond on the top trace.](./assets/signal-trace.svg)
+
+Follow the orange input to its output. At a crossing, stay on the same trace. Open your pick to check it.
+
+<details>
+<summary><b>Output A</b></summary>
+
+A connects to the bottom input. Try following it backwards from the right edge.
+
+</details>
+
+<details>
+<summary><b>Output B</b></summary>
+
+Signal received! The orange trace drops from the top lane to the middle, then to the bottom, and finally climbs back up to B.
+
+</details>
+
+<details>
+<summary><b>Output C</b></summary>
+
+C connects to the middle input. Look again at the last crossing before the outputs.
+
+</details>
+
+### Selected work
+
+| Project | What you’ll find |
+| --- | --- |
+| [FORMA · ATRIUM 01](https://github.com/par1ram/forma-atrium-01) | Explore a residence in 3D, configure its specifications, and get an estimate. Built with Next.js and Three.js. |
+| [E-commerce microservices](https://github.com/par1ram/ecom-microservices) | Go services for accounts, orders, and catalog search, connected through gRPC and a GraphQL gateway. |
+| [Stratum V2](https://github.com/stratum-mining/stratum/pulls?q=is%3Apr+author%3Apar1ram+is%3Amerged) | My Rust contributions to coinbase validation and group channel state in the mining protocol libraries. |
