@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 544" width="960" height="544" role="img" aria-labelledby="title desc">
   <title id="title">Vladislav’s Stratum relay</title>
-  <desc id="desc">Two ASICs forward work on separate sessions. The relay streams telemetry to a hashrate balancer over bidirectional gRPC. The balancer smooths hashrate with an EWMA. When pool A goes offline, the breaker trips and the balancer tells the relay to move ASIC 01 onto an already-open connection to pool B. The Avalon stays on its own connection to B.</desc>
+  <desc id="desc">Two ASICs forward work on separate sessions. The relay streams telemetry to a hashrate balancer over bidirectional gRPC. The balancer smooths hashrate with an EWMA. When pool A goes offline, the breaker trips and the balancer tells the relay to move ASIC 01 onto an already-open connection to pool B. ASIC 02 stays on its own connection to B.</desc>
   <defs>
     <pattern id="grid" width="16" height="16" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r="1" fill="#2b423b"/></pattern>
     <g id="miner" fill="none" stroke="currentColor" stroke-width="1.8">
@@ -78,7 +78,7 @@
     <rect x="750" y="265" width="165" height="50" rx="9"/><rect x="750" y="326" width="165" height="59" rx="9"/>
   </g>
   <use href="#miner" x="56" y="279" color="#b5ceab"/><use href="#miner" x="56" y="349" color="#b5ceab"/>
-  <text x="101" y="297" font-size="21">ASIC 01</text><text x="101" y="367" font-size="21">Avalon</text>
+  <text x="101" y="297" font-size="21">ASIC 01</text><text x="101" y="367" font-size="21">ASIC 02</text>
   <g class="mono label muted"><text x="42" y="249">MINERS</text><text x="750" y="249">UPSTREAM POOLS</text></g>
   <g transform="translate(383 277)" fill="none" stroke="#b9e098" stroke-width="2.3">
     <path d="M0 4h9l8 8h16M0 15h6M19 4h14"/><circle cx="35" cy="4" r="2"/><circle cx="35" cy="12" r="2"/>
@@ -100,7 +100,7 @@
   </g>
   <g class="mono" font-size="16">
     <path d="m43 406 7 6-7 6" fill="none" stroke="#ffb276" stroke-width="2.6"/>
-    <text x="64" y="418" class="normal">Forwarding · ASIC 01 → A, Avalon → B</text>
+    <text x="64" y="418" class="normal">Forwarding · ASIC 01 → A, ASIC 02 → B</text>
     <text x="64" y="418" class="lost" style="fill:#f4aa95">Pool A offline · circuit breaker opens</text>
     <text x="64" y="418" class="switch" style="fill:#ffb276">Move ASIC 01 → B · reuse open connection</text>
     <text x="64" y="418" class="onB">Pool B active · two independent miner sessions</text>
@@ -109,7 +109,7 @@
 
   <g stroke="#495f4e"><path d="M297 458v61m349-61v61"/></g>
   <g font-size="29" font-weight="650">
-    <text x="42" y="484">5–6 EH/s</text><text x="324" y="484">2 h → 15 min</text><text x="674" y="484">±10 PH/s</text>
+    <text x="42" y="484">5–6 EH/s</text><text x="324" y="484">15 min</text><text x="674" y="484">±10 PH/s</text>
   </g>
-  <g class="muted" font-size="17"><text x="42" y="512">Relay throughput</text><text x="324" y="512">Time to balance 1 EH/s</text><text x="674" y="512">Deviation from target</text></g>
+  <g class="muted" font-size="17"><text x="42" y="512">Relay throughput</text><text x="324" y="512">Balancing 1 EH/s</text><text x="674" y="512">Deviation from target</text></g>
 </svg>
