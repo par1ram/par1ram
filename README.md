@@ -1,3 +1,8 @@
+![Animated Stratum relay architecture. The relay streams telemetry to an EWMA balancer via bidirectional gRPC. When Pool A fails, a move command reroutes ASIC 01 onto an existing Pool B connection. The Avalon keeps its own session.](./assets/stratum-relay.svg)
+
+<details>
+<summary><b>Play Signal Trace</b></summary>
+
 ![Vladislav’s Signal Trace puzzle. Three circuit traces lead from the left to outputs A, B, and C. Start at the orange diamond on the top trace.](./assets/signal-trace.svg)
 
 Follow the orange input to its output. At a crossing, stay on the same trace. Open your pick to check it.
@@ -20,6 +25,8 @@ Signal received! The orange trace drops from the top lane to the middle, then to
 <summary><b>Output C</b></summary>
 
 C connects to the middle input. Look again at the last crossing before the outputs.
+
+</details>
 
 </details>
 
