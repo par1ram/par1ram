@@ -1,1 +1,1 @@
-![Stratum relay with animated share streams from a direct ASIC and a mining proxy. When Pool A fails, the ASIC moves to Pool B while the proxy continues forwarding shares.](https://github.com/par1ram/par1ram/raw/832805669b499bdb7c10711a8f35d89758bbfd25/assets/stratum-routing.svg)
+![Stratum relay with animated share streams from a direct ASIC and a mining proxy. When Pool A fails, the ASIC moves to Pool B while the proxy continues forwarding shares.](https://github.com/par1ram/par1ram/raw/08eb4bf5512d9b5fce995d244de4777b72bd03b7/assets/stratum-routing.svg)
