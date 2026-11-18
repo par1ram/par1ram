@@ -1,1 +1,1 @@
-![Animated Stratum relay architecture showing telemetry, pool failover, and ASIC routing.](./assets/stratum-failover.svg)
+![Stratum relay with animated share streams from a direct ASIC and a mining proxy. When Pool A fails, the ASIC moves to Pool B while the proxy continues forwarding shares.](./assets/stratum-routing.svg)

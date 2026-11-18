@@ -1,18 +1,38 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 544" width="960" height="544" role="img" aria-labelledby="title desc">
   <title id="title">Vladislav’s Stratum relay</title>
-  <desc id="desc">Two ASICs forward work on separate sessions. The relay streams telemetry to a hashrate balancer over bidirectional gRPC. The balancer smooths hashrate with an EWMA. When pool A goes offline, the breaker trips and the balancer tells the relay to move ASIC 01 onto an already-open connection to pool B. ASIC 02 stays on its own connection to B.</desc>
+  <desc id="desc">A direct ASIC and a mining proxy forward shares on separate sessions. The proxy aggregates shares from several ASICs. The relay streams telemetry to a hashrate balancer over bidirectional gRPC. The balancer smooths hashrate with an EWMA. When pool A goes offline, the breaker trips and the balancer tells the relay to move the ASIC onto an already-open connection to pool B. The proxy stays on its own connection to B.</desc>
   <defs>
     <pattern id="grid" width="16" height="16" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r="1" fill="#2b423b"/></pattern>
-    <g id="miner" fill="none" stroke="currentColor" stroke-width="1.8">
-      <rect x="0" y="0" width="30" height="22" rx="3"/>
-      <circle cx="10" cy="11" r="5.5"/><path d="m8 7 4 8m-6-4h8m6-5h6m-6 5h6m-6 5h6"/>
+    <g id="fan">
+      <circle r="8.4" fill="#15241d" stroke="#acc997" stroke-width="1.3"/>
+      <g class="rotor" fill="#a6c391">
+        <path id="blade" d="M1-2Q0-8 5-6Q7-3 2 0Z"/>
+        <use href="#blade" transform="rotate(90)"/><use href="#blade" transform="rotate(180)"/><use href="#blade" transform="rotate(270)"/>
+      </g>
+      <circle r="2" fill="#e4eacd"/>
+    </g>
+    <g id="miner" stroke-linejoin="round">
+      <path d="m0 9 16-8h50L50 9z" fill="#59735f" stroke="#a0b399"/>
+      <path d="m50 9 16-8v25l-16 8z" fill="#2c4939" stroke="#96b29a"/>
+      <rect y="9" width="50" height="25" rx="2" fill="#334b3a" stroke="#a7bf9c"/>
+      <path d="m11 7 9-4m0 4 9-4m0 4 9-4m0 4 9-4m7 11 9-5m-9 10 9-5m-9 10 9-5" fill="none" stroke="#b6c5a5" stroke-width="1.3"/>
+      <use href="#fan" x="13" y="21.5"/><use href="#fan" x="36" y="21.5"/>
+    </g>
+    <g id="proxy">
+      <path d="M9 4h9l11 12h11M9 16h31M9 28h9l11-12" fill="none" stroke="#7fc9a4" stroke-width="1.8"/>
+      <g fill="#243e31" stroke="#a4cfac" stroke-width="1.2">
+        <rect y="0" width="10" height="8" rx="1.5"/><rect y="12" width="10" height="8" rx="1.5"/><rect y="24" width="10" height="8" rx="1.5"/>
+      </g>
+      <path d="M38 11l7-5h21l-7 5z" fill="#60846b" stroke="#aac5ab"/>
+      <rect x="38" y="11" width="28" height="13" rx="2" fill="#324f3e" stroke="#aac5ab"/>
+      <path d="M43 17h8m7 0h3" stroke="#92efbb" stroke-width="2.5"/>
     </g>
     <g id="rack" fill="none" stroke="currentColor" stroke-width="1.8">
       <rect width="28" height="10" x="0" y="0" rx="2"/><rect width="28" height="10" x="0" y="14" rx="2"/>
       <path d="M4 5h3m6 0h10M4 19h3m6 0h10"/>
     </g>
     <g id="port"><circle r="4.2" fill="#11241e" stroke="#96b89d" stroke-width="2"/></g>
-    <path id="in1" d="M210 290H357"/><path id="in2" d="M210 360H357"/>
+    <path id="in1" d="M264 290H357"/><path id="in2" d="M264 360H357"/>
     <path id="toA" d="M598 290H750"/><path id="toB1" d="M598 307H625L661 343H750"/><path id="toB2" d="M598 361H750"/>
     <path id="up" d="M420 256V184"/><path id="down" d="M535 184V256"/>
   </defs>
@@ -24,6 +44,10 @@
     .node { fill:#1a2c25; stroke:#597360; stroke-width:1.5 }
     .wire { fill:none; stroke:#516f58; stroke-width:3; stroke-linejoin:round }
     .packet { fill:none; stroke:#c1ef97; stroke-width:4; stroke-linecap:round; stroke-linejoin:round; stroke-dasharray:7 85; animation:travel 1.65s linear infinite }
+    .proxy-packet { stroke:#80e8b0; stroke-dasharray:8 38; animation-duration:2s; animation-delay:-0.36s }
+    .proxy-out { animation-delay:-0.92s }
+    .rotor { animation:spin 3s linear infinite }
+    @keyframes spin { to { transform:rotate(360deg) } }
     .blue { stroke:#68d0d4; animation-duration:1.4s }
     .amber { stroke:#ffb276; animation-duration:1s }
     .lost,.switch,.onB,.outage { opacity:0 }
@@ -39,7 +63,7 @@
     @keyframes onB { 0%,100% {opacity:0} 66% {opacity:1} }
     @keyframes outage { 0%,100% {opacity:0} 44% {opacity:1} }
     @media (prefers-reduced-motion: reduce) {
-      .normal,.lost,.switch,.onB,.outage,.packet { animation:none }
+      .normal,.lost,.switch,.onB,.outage,.packet,.rotor { animation:none }
       .normal {opacity:0} .outage,.onB {opacity:1}
     }
   </style>
@@ -55,7 +79,9 @@
     <use href="#in1"/><use href="#in2"/><use href="#toA"/><use href="#toB1"/><use href="#toB2"/>
     <use href="#up" stroke="#437878"/><use href="#down" stroke="#926b4d"/>
   </g>
-  <g class="packet"><use href="#in1"/><use href="#in2" stroke-dashoffset="41"/><use href="#toB2"/></g>
+  <use href="#in1" class="packet"/>
+  <use href="#in2" class="packet proxy-packet"/>
+  <use href="#toB2" class="packet proxy-packet proxy-out"/>
   <g class="normal"><use href="#toA" class="packet"/></g>
   <g class="onB"><use href="#toB1" class="packet"/></g>
   <use href="#up" class="packet blue"/><g class="switch"><use href="#down" class="packet amber"/></g>
@@ -73,13 +99,16 @@
   <text x="550" y="221" class="mono" font-size="16" style="fill:#ffb276">↓ move command</text>
 
   <g class="node">
-    <rect x="42" y="265" width="168" height="50" rx="9"/><rect x="42" y="335" width="168" height="50" rx="9"/>
+    <rect x="42" y="260" width="222" height="60" rx="9"/><rect x="42" y="330" width="222" height="60" rx="9"/>
     <rect x="357" y="256" width="241" height="122" rx="12" fill="#22362a" stroke="#829e78"/>
     <rect x="750" y="265" width="165" height="50" rx="9"/><rect x="750" y="326" width="165" height="59" rx="9"/>
   </g>
-  <use href="#miner" x="56" y="279" color="#b5ceab"/><use href="#miner" x="56" y="349" color="#b5ceab"/>
-  <text x="101" y="297" font-size="21">ASIC 01</text><text x="101" y="367" font-size="21">ASIC 02</text>
-  <g class="mono label muted"><text x="42" y="249">MINERS</text><text x="750" y="249">UPSTREAM POOLS</text></g>
+  <use href="#miner" x="54" y="272"/><use href="#proxy" x="54" y="344"/>
+  <text x="130" y="287" font-size="21" font-weight="650">ASIC</text>
+  <text x="130" y="307" class="muted" font-size="14">Direct session</text>
+  <text x="130" y="357" font-size="20" font-weight="650">Mining proxy</text>
+  <text x="130" y="377" class="muted" font-size="14">Aggregated shares</text>
+  <g class="mono label muted"><text x="42" y="249">HASHRATE SOURCES</text><text x="750" y="249">UPSTREAM POOLS</text></g>
   <g transform="translate(383 277)" fill="none" stroke="#b9e098" stroke-width="2.3">
     <path d="M0 4h9l8 8h16M0 15h6M19 4h14"/><circle cx="35" cy="4" r="2"/><circle cx="35" cy="12" r="2"/>
   </g>
@@ -93,17 +122,17 @@
     <path d="m688 284-9 12m18-12-9 12" stroke="#f19680" stroke-width="2.5"/>
   </g>
   <g>
-    <use href="#port" x="210" y="290"/><use href="#port" x="210" y="360"/>
+    <use href="#port" x="264" y="290"/><use href="#port" x="264" y="360"/>
     <use href="#port" x="357" y="290"/><use href="#port" x="357" y="360"/>
     <use href="#port" x="598" y="290"/><use href="#port" x="598" y="307"/><use href="#port" x="598" y="361"/>
     <use href="#port" x="750" y="290"/><use href="#port" x="750" y="343"/><use href="#port" x="750" y="361"/>
   </g>
   <g class="mono" font-size="16">
     <path d="m43 406 7 6-7 6" fill="none" stroke="#ffb276" stroke-width="2.6"/>
-    <text x="64" y="418" class="normal">Forwarding · ASIC 01 → A, ASIC 02 → B</text>
+    <text x="64" y="418" class="normal">Forwarding · ASIC → A, proxy → B</text>
     <text x="64" y="418" class="lost" style="fill:#f4aa95">Pool A offline · circuit breaker opens</text>
-    <text x="64" y="418" class="switch" style="fill:#ffb276">Move ASIC 01 → B · reuse open connection</text>
-    <text x="64" y="418" class="onB">Pool B active · two independent miner sessions</text>
+    <text x="64" y="418" class="switch" style="fill:#ffb276">Move ASIC → B · reuse open connection</text>
+    <text x="64" y="418" class="onB">Pool B active · separate ASIC and proxy sessions</text>
     <text x="913" y="418" text-anchor="end" class="muted label">FAILOVER REPLAY</text>
   </g>
 
