@@ -19,22 +19,28 @@
       <path d="m11 7 9-4m0 4 9-4m0 4 9-4m0 4 9-4m7 11 9-5m-9 10 9-5m-9 10 9-5" fill="none" stroke="#b6c5a5" stroke-width="1.3"/>
       <use href="#fan" x="13" y="21.5"/><use href="#fan" x="36" y="21.5"/>
     </g>
-    <g id="proxy">
-      <g fill="none" stroke="#608e77" stroke-width="1.8">
-        <path id="feed-top" pathLength="40" d="M9 4h9l11 12h11"/>
-        <path id="feed-mid" pathLength="40" d="M9 16h31"/>
-        <path id="feed-low" pathLength="40" d="M9 28h9l11-12h11"/>
+    <g id="proxy-source">
+      <rect width="14" height="8" rx="2" fill="#2b4636" stroke="#a4ba9e"/>
+      <circle cx="4.5" cy="4" r="1.7" fill="none" stroke="#c2d2b3"/>
+      <path d="M8 4h3" stroke="#81ba8d" stroke-width="1.5"/>
+    </g>
+    <g id="proxy" stroke-linejoin="round">
+      <g fill="none" stroke="#648e76" stroke-width="2">
+        <path id="feed-top" pathLength="40" d="M13 4h5l12 12h12"/>
+        <path id="feed-mid" pathLength="40" d="M13 16h29"/>
+        <path id="feed-low" pathLength="40" d="M13 28h5l12-12h12"/>
       </g>
-      <g fill="none" stroke="#a4ffcd" stroke-width="2.6" stroke-linecap="round">
+      <g fill="none" stroke="#a4ffcd" stroke-width="3" stroke-linecap="round">
         <use href="#feed-top" class="feed"/><use href="#feed-mid" class="feed" style="animation-delay:-0.7s"/>
         <use href="#feed-low" class="feed" style="animation-delay:-1.4s"/>
       </g>
-      <g fill="#243e31" stroke="#a4cfac" stroke-width="1.2">
-        <rect y="0" width="10" height="8" rx="1.5"/><rect y="12" width="10" height="8" rx="1.5"/><rect y="24" width="10" height="8" rx="1.5"/>
-      </g>
-      <path d="M38 11l7-5h21l-7 5z" fill="#60846b" stroke="#aac5ab"/>
-      <rect x="38" y="11" width="28" height="13" rx="2" fill="#324f3e" stroke="#aac5ab"/>
-      <path d="M43 17h8m7 0h3" stroke="#92efbb" stroke-width="2.5"/>
+      <use href="#proxy-source"/><use href="#proxy-source" y="12"/><use href="#proxy-source" y="24"/>
+      <path d="m38 7 6-4h18l-5 4z" fill="#67846a" stroke="#b1c5a8"/>
+      <path d="m57 7 5-4v22l-5 4z" fill="#294437" stroke="#94ad94"/>
+      <rect x="38" y="7" width="19" height="22" rx="2" fill="#365441" stroke="#adc2a6"/>
+      <path d="M42 12h11m-11 3h11" stroke="#92ae91" stroke-width="1.5"/>
+      <rect x="42" y="20" width="11" height="5" rx="1" fill="#13271b" stroke="#a0b49a"/>
+      <path d="M59 17h9m-3-3 3 3-3 3" fill="none" stroke="#95edb3" stroke-width="2"/>
     </g>
     <g id="rack" fill="none" stroke="currentColor" stroke-width="1.8">
       <rect width="28" height="10" x="0" y="0" rx="2"/><rect width="28" height="10" x="0" y="14" rx="2"/>
@@ -136,11 +142,24 @@
   <text x="130" y="357" font-size="20" font-weight="650">Mining proxy</text>
   <text x="130" y="377" class="muted" font-size="14">Aggregated shares</text>
   <g class="mono label muted"><text x="42" y="249">HASHRATE SOURCES</text><text x="750" y="249">UPSTREAM POOLS</text></g>
-  <g transform="translate(383 277)" fill="none" stroke="#b9e098" stroke-width="2.3">
-    <path d="M-1 10h6m19-6h10m-10 12h10" stroke="#76916f"/>
-    <path d="M5 10h19" class="contact" stroke="#c5ed9f" stroke-linecap="round"/>
-    <circle cx="5" cy="10" r="2" fill="#b9e098"/>
-    <circle cx="36" cy="4" r="2"/><circle cx="36" cy="16" r="2"/>
+  <g transform="translate(383 263)" stroke-linejoin="round">
+    <path d="m0 6 9-5h66l-8 5z" fill="#667d62" stroke="#adbf9e"/>
+    <path d="m67 6 8-5v30l-8 5z" fill="#294434" stroke="#93aa90"/>
+    <rect y="6" width="67" height="30" rx="3" fill="#182c20" stroke="#a1b599"/>
+    <g transform="translate(14 6)" fill="none" stroke-width="2" stroke-linecap="round">
+      <path d="M-6 10H5m18-6h20m-20 12h20" stroke="#64816a"/>
+      <path d="M5 10h19" class="contact" stroke="#c5ed9f"/>
+      <circle cx="5" cy="10" r="2.2" fill="#b9e098"/>
+      <path d="M-6 24h49" stroke="#547a62"/>
+      <path d="M-6 24h49" class="packet proxy-packet" style="stroke-width:2.5"/>
+    </g>
+    <g fill="#1f3223" stroke="#899f86">
+      <rect x="3" y="14" width="6" height="4" rx="1"/><rect x="3" y="28" width="6" height="4" rx="1"/>
+      <rect x="56" y="8" width="7" height="4" rx="1"/><rect x="56" y="20" width="7" height="4" rx="1"/>
+      <rect x="56" y="28" width="7" height="4" rx="1" fill="#80e8b0"/>
+    </g>
+    <rect class="normal" x="57" y="9" width="5" height="2" fill="#c5ed9f"/>
+    <rect class="onB" x="57" y="21" width="5" height="2" fill="#c5ed9f"/>
   </g>
   <text x="383" y="325" font-size="26" font-weight="650">Stratum relay</text>
   <text x="383" y="352" class="muted" font-size="17">Persistent connections</text>
